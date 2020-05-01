@@ -10,5 +10,5 @@ wsl --set-version Debian 2
 
 ## Installation
 ```bash
-sudo apt update && sudo apt upgrade && sudo apt install curl git && sh -c "$(curl -fsSL https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
+sudo apt update && sudo apt upgrade && sudo apt install curl git && yes | sh -c "$(curl -fsSL https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
 ```
