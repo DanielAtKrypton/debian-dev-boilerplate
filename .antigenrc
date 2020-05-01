@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Use Oh-My-Zsh
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle nvm
+antigen bundle npm
+antigen bundle docker
+antigen bundle z
+antigen bundle extract
+antigen bundle pip
+antigen bundle virtualenvwrapper
+antigen bundle virtualenv
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Fish-like auto suggestions
+antigen bundle zsh-users/zsh-autosuggestions
+
+# To fix the suggestion style
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
+
+# Extra zsh completions
+antigen bundle zsh-users/zsh-completions
+
+# Load the theme
+# antigen theme robbyrussell
+antigen theme romkatv/powerlevel10k
+
+# Apply changes
+antigen apply
