@@ -15,6 +15,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #
 # Choose y!
 
-# install antigen
+# install Antigen
 sudo apt-get install zsh-antigen
 # or use git.io/antigen-nightly for the latest version
+
+# Configure Antigen
+curl https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.antigenrc -o ~/.antigenrc
+
+# Config zsh to use Antigen
+curl https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zshrc -o ~/.zshrc
