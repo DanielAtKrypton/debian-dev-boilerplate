@@ -13,7 +13,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 # Choose y!
 
 # install Antigen
-sudo apt-get install zsh-antigen
+sudo apt-get install zsh-antigen virtualenvwrapper
 # or use git.io/antigen-nightly for the latest version
 
 # Configure Antigen
