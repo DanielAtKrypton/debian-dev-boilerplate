@@ -17,7 +17,7 @@ sudo apt-get install zsh-antigen
 # or use git.io/antigen-nightly for the latest version
 
 # Configure Antigen
-wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.antigenrc -o ~/.antigenrc
+sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.antigenrc -O ~/.antigenrc)"
 
 # Config zsh to use Antigen
-wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zshrc -o ~/.zshrc
+sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zshrc -O ~/.zshrc)"
