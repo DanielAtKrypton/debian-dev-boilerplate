@@ -17,6 +17,9 @@ wsl --set-version Debian 2
 ```
 
 ## Installation
+
+To install the boilerplate, issue the following one liner command in the bash shell.
+
 ```bash
 sudo apt update && sudo apt upgrade && sudo apt install wget git && yes | sh -c "$(wget -fsSL https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
 ```
