@@ -36,3 +36,11 @@ sudo apt update && sudo apt upgrade && sudo apt install wget git && yes | sh -c 
 There are many more available [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins).
 
 The recommended way to add a plugin is editing `.antigenrc` file.
+
+## Update
+
+```bash
+sudo apt-get update
+sudo apt-get install zsh-antigen virtualenvwrapper
+antigen update
+```
