@@ -39,6 +39,8 @@ The recommended way to add a plugin is editing `.antigenrc` file.
 
 ## Update
 
+To update the whole stack, enter the following commands in the bash shell:
+
 ```bash
 sudo apt-get update
 sudo apt-get install zsh-antigen virtualenvwrapper
