@@ -22,7 +22,7 @@ if [ $DISTRO = "Debian GNU/Linux" ]; then
   sudo apt-get install zsh-antigen
 elif [ $DISTRO = "Ubuntu" ]; then
   sudo apt-get install curl
-  curl -L git.io/antigen > antigen.zsh
+  curl -L git.io/antigen > $HOME/antigen.zsh
   echo "Distribution not yet supported."
 else
   echo "Unknown distribution."

@@ -109,10 +109,18 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Use antigen
-source /usr/share/zsh-antigen/antigen.zsh
+. /etc/os-release
+DISTRO=$NAME
 
-antigen init ~/.antigenrc
-
+if [ $DISTRO = "Debian GNU/Linux" ]; then
+  source /usr/share/zsh-antigen/antigen.zsh
+  antigen init ~/.antigenrc
+elif [ $DISTRO = "Ubuntu" ]; then
+  source $HOME/antigen.zsh
+  antigen init ~/.antigenrc
+else
+  echo "Unknown distribution."
+fi
 
 # # BASHCOMPINIT
 # # To activate completions for zsh you need to have
