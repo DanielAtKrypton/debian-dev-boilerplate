@@ -12,8 +12,18 @@ yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 #
 # Choose y!
 
+# install Virtualenvwrapper
+sudo apt-get install virtualenvwrapper
+
 # install Antigen
-sudo apt-get install zsh-antigen virtualenvwrapper
+. /etc/os-release
+DISTRO=$NAME
+if [ $DISTRO = "Debian GNU/Linux" ] 
+then
+  sudo apt-get install zsh-antigen
+elif [ $DISTRO = "Ubuntu" ]
+  echo "Distribution not yet supported."
+fi
 # or use git.io/antigen-nightly for the latest version
 
 # Configure Antigen
