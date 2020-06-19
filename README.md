@@ -1,5 +1,7 @@
 # Debian Development Boilerplate
 
+[![Build Status](https://dev.azure.com/DanielAtKrypton/Debian%20Dev%20Boilerplate/_apis/build/status/DanielAtKrypton.debian-dev-boilerplate?branchName=master)](https://dev.azure.com/DanielAtKrypton/Debian%20Dev%20Boilerplate/_build/latest?definitionId=4&branchName=master)
+
 ## Stack
 
 - [Oh my zsh](https://ohmyz.sh/). Your terminal never felt this good before.
