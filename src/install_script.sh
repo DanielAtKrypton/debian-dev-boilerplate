@@ -5,7 +5,7 @@
 sudo apt install zsh
 
 # install oh-my-zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # When asked:
 # Time to change your default shell to zsh:
 # Do you want to change your default shell to zsh? [Y/n] y
