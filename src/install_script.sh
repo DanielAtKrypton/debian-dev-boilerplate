@@ -18,13 +18,12 @@ sudo apt-get install virtualenvwrapper
 # install Antigen
 . /etc/os-release
 DISTRO=$NAME
-if [ $DISTRO = "Debian GNU/Linux" ] 
-then
+if [ $DISTRO = "Debian GNU/Linux" ]; then
   sudo apt-get install zsh-antigen
-elif [ $DISTRO = "Ubuntu" ]
-then
+elif [ $DISTRO = "Ubuntu" ]; then
   echo "Distribution not yet supported."
 else
+  echo "Unknown distribution."
 fi
 # or use git.io/antigen-nightly for the latest version
 
