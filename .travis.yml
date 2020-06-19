@@ -1,7 +1,0 @@
-dist: bionic
-addons:
-  apt:
-    sources:
-    packages:
-script:
-  - . src/install_script.sh
