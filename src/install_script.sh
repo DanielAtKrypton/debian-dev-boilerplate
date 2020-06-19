@@ -22,6 +22,7 @@ if [ $DISTRO = "Debian GNU/Linux" ]
 then
   sudo apt-get install zsh-antigen
 elif [ $DISTRO = "Ubuntu" ]
+then
   echo "Distribution not yet supported."
 fi
 # or use git.io/antigen-nightly for the latest version
