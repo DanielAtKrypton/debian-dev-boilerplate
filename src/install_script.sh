@@ -24,6 +24,7 @@ then
 elif [ $DISTRO = "Ubuntu" ]
 then
   echo "Distribution not yet supported."
+else
 fi
 # or use git.io/antigen-nightly for the latest version
 
