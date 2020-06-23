@@ -33,4 +33,4 @@ fi
 sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.antigenrc -O ~/.antigenrc)"
 
 # Config zsh to use Antigen
-sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zshrc -O ~/.zshrc)"
+sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zprofile -O ~/.zprofile)"
