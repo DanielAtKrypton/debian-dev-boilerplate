@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Update to wsl 2. From powershell, run the following:
 # wsl --set-version Debian 2
 
