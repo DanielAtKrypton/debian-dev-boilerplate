@@ -1,4 +1,4 @@
-# Debian Development Boilerplate
+# Debian/Ubuntu Development Boilerplate
 
 [![Build Status](https://dev.azure.com/DanielAtKrypton/Debian%20Dev%20Boilerplate/_apis/build/status/DanielAtKrypton.debian-dev-boilerplate?branchName=master)](https://dev.azure.com/DanielAtKrypton/Debian%20Dev%20Boilerplate/_build/latest?definitionId=4&branchName=master)
 
@@ -11,19 +11,21 @@
 - [Virtualenv](https://pypi.org/project/virtualenv/). A tool for creating isolated virtual python environments.
 
 ## Requirements
-Make sure you have a fresh Debian installation to proceed.
-If your Debian distro is running on WSL, make sure you have successfully set WSL2 with the following command on Powershell:
+Make sure you have a fresh Debian or Ubuntu installation to proceed.
+If your distro is running on WSL, make sure you have successfully set WSL2 with the following command on Powershell:
 
 ```powershell
-wsl --set-version Debian 2
+wsl --set-version <distro_name> 2
 ```
+
+where `<distro_name>` is either `Debian` or `Ubuntu` accordingly.
 
 ## Installation
 
 To install the boilerplate, issue the following one liner command in the bash shell.
 
 ```bash
-sudo apt update && sudo apt upgrade && sudo apt install wget git && yes | sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
+sudo apt update && yes | sudo apt upgrade && sudo apt install wget git && yes | sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
 ```
 
 ## Preinstalled Oh my zsh plugins
