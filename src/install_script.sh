@@ -25,7 +25,6 @@ if [ $DISTRO = "Debian GNU/Linux" ]; then
 elif [ $DISTRO = "Ubuntu" ]; then
   sudo apt-get install curl
   curl -L git.io/antigen > $HOME/antigen.zsh
-  echo "Distribution not yet supported."
 else
   echo "Unknown distribution."
 fi
