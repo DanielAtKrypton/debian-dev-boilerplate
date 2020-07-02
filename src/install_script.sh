@@ -7,7 +7,7 @@
 distribution_id=$(. /etc/os-release; echo $ID)
 
 # https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
-yes | sudo apt-get install curl
+yes | sudo apt-get install curl netcat
 
 # install zsh
 sudo apt install zsh
