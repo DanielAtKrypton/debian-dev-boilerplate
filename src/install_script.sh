@@ -4,7 +4,8 @@
 # wsl --set-version Debian 2
 
 . /etc/os-release
-distribution=$NAME
+distribution=$(. /etc/os-release; echo $ID$VERSION_ID)
+distribution_id=$(. /etc/os-release; echo $ID)
 
 # https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
 yes | sudo apt-get install curl gnupg
@@ -27,9 +28,9 @@ yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 sudo apt-get install virtualenvwrapper
 
 # install Antigen
-if [ $distribution = "Debian GNU/Linux" ]; then
+if [ $distribution_id = "debian" ]; then
   sudo apt-get install zsh-antigen
-elif [ $distribution = "Ubuntu" ]; then
+elif [ $distribution_id = "ubuntu" ]; then
   curl -L git.io/antigen > $HOME/antigen.zsh
 else
   echo "Unknown distribution."
