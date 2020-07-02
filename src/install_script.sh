@@ -3,6 +3,9 @@
 # Update to wsl 2. From powershell, run the following:
 # wsl --set-version Debian 2
 
+. /etc/os-release
+distribution=$NAME
+
 # https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
 yes | sudo apt-get install curl gnupg
 
@@ -24,11 +27,9 @@ yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 sudo apt-get install virtualenvwrapper
 
 # install Antigen
-. /etc/os-release
-DISTRO=$NAME
-if [ $DISTRO = "Debian GNU/Linux" ]; then
+if [ $distribution = "Debian GNU/Linux" ]; then
   sudo apt-get install zsh-antigen
-elif [ $DISTRO = "Ubuntu" ]; then
+elif [ $distribution = "Ubuntu" ]; then
   curl -L git.io/antigen > $HOME/antigen.zsh
 else
   echo "Unknown distribution."
