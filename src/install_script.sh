@@ -4,7 +4,7 @@
 # wsl --set-version Debian 2
 
 # install zsh
-sudo apt install zsh
+sudo apt install zsh curl wget
 
 # install oh-my-zsh
 yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -18,7 +18,6 @@ DISTRO=$NAME
 if [ $DISTRO = "Debian GNU/Linux" ]; then
   sudo apt-get install zsh-antigen
 elif [ $DISTRO = "Ubuntu" ]; then
-  sudo apt-get install curl
   curl -L git.io/antigen > $HOME/antigen.zsh
 else
   echo "Unknown distribution."
