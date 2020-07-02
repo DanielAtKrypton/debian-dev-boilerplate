@@ -22,6 +22,7 @@ elif [ $DISTRO = "Ubuntu" ]; then
   curl -L git.io/antigen > $HOME/antigen.zsh
 else
   echo "Unknown distribution."
+  exit 1
 fi
 # or use git.io/antigen-nightly for the latest version
 
@@ -33,3 +34,5 @@ sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/mast
 
 # Now set ZSH as the default login shell for the user you’re logged in as with the following command:
 sudo usermod -s /usr/bin/zsh $(whoami)
+
+exit
