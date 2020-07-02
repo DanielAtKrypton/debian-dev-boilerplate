@@ -18,6 +18,7 @@ DISTRO=$NAME
 if [ $DISTRO = "Debian GNU/Linux" ]; then
   sudo apt-get install zsh-antigen
 elif [ $DISTRO = "Ubuntu" ]; then
+  sudo apt-get install curl
   curl -L git.io/antigen > $HOME/antigen.zsh
 else
   echo "Unknown distribution."
@@ -32,15 +33,3 @@ sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/mast
 
 # Now set ZSH as the default login shell for the user you’re logged in as with the following command:
 sudo usermod -s /usr/bin/zsh $(whoami)
-
-
-## Install Nvidia Container Toolkit according to https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
-# Set the distribution variable, import the Nvidia repository GPG key, and then add the Nvidia repositories to the Ubuntu apt package manager:
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-yes | sudo apt-get install gnupg
-curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
-sudo apt update && sudo apt install -y nvidia-docker2
-
-exit
