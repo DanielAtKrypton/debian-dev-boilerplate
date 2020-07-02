@@ -8,11 +8,6 @@ sudo apt install zsh
 
 # install oh-my-zsh
 yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# When asked:
-# Time to change your default shell to zsh:
-# Do you want to change your default shell to zsh? [Y/n] y
-#
-# Choose y!
 
 # install Virtualenvwrapper
 sudo apt-get install virtualenvwrapper
@@ -38,3 +33,14 @@ sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/mast
 
 # Now set ZSH as the default login shell for the user you’re logged in as with the following command:
 sudo usermod -s /usr/bin/zsh $(whoami)
+
+
+## Install Nvidia Container Toolkit according to https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
+# Set the distribution variable, import the Nvidia repository GPG key, and then add the Nvidia repositories to the Ubuntu apt package manager:
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
+sudo apt update && sudo apt install -y nvidia-docker2
+
+exit
