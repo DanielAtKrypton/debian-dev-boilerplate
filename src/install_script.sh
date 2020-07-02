@@ -3,6 +3,17 @@
 # Update to wsl 2. From powershell, run the following:
 # wsl --set-version Debian 2
 
+# https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
+yes | sudo apt-get install curl gnupg
+
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
+
+sudo apt update && sudo apt install -y nvidia-docker2
+
 # install zsh
 sudo apt install zsh
 
@@ -18,7 +29,6 @@ DISTRO=$NAME
 if [ $DISTRO = "Debian GNU/Linux" ]; then
   sudo apt-get install zsh-antigen
 elif [ $DISTRO = "Ubuntu" ]; then
-  sudo apt-get install curl
   curl -L git.io/antigen > $HOME/antigen.zsh
 else
   echo "Unknown distribution."
