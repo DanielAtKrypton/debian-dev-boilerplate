@@ -37,7 +37,7 @@ sudo usermod -s /usr/bin/zsh $(whoami)
 ## Install Nvidia Container Toolkit according to https://ubuntu.com/blog/getting-started-with-cuda-on-ubuntu-on-wsl-2
 # Set the distribution variable, import the Nvidia repository GPG key, and then add the Nvidia repositories to the Ubuntu apt package manager:
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-sudo apt-get install gnupg
+yes | sudo apt-get install gnupg
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
