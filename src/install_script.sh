@@ -4,7 +4,7 @@
 # wsl --set-version Debian 2
 
 # install zsh
-sudo apt install zsh curl wget
+sudo apt install zsh
 
 # install oh-my-zsh
 yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
