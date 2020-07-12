@@ -1,0 +1,23 @@
+# Use antigen
+. /etc/os-release
+DISTRO=$NAME
+
+if [ $DISTRO = "Debian GNU/Linux" ]; then
+  source /usr/share/zsh-antigen/antigen.zsh
+  antigen init ~/.antigenrc
+elif [ $DISTRO = "Ubuntu" ]; then
+  source $HOME/antigen.zsh
+  antigen init ~/.antigenrc
+else
+  echo "Unknown distribution."
+fi
+
+# set DISPLAY variable to the IP automatically assigned to WSL2
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+# Start Docker daemon automatically when logging in if not running.
+RUNNING=`ps aux | grep dockerd | grep -v grep`
+if [ -z "$RUNNING" ]; then
+    sudo dockerd > /dev/null 2>&1 &
+    disown
+fi
