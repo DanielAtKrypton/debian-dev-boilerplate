@@ -7,8 +7,6 @@
 - [Oh my zsh](https://ohmyz.sh/). Your terminal never felt this good before.
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k). Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 - [Antigen](http://antigen.sharats.me/). A plugin manager for zsh, inspired by oh-my-zsh and vundle.
-- [VirtualenvWrapper](https://virtualenvwrapper.readthedocs.io/en/latest/). VirtualenvWrapper is a set of extensions to Ian Bicking’s virtualenv tool.
-- [Virtualenv](https://pypi.org/project/virtualenv/). A tool for creating isolated virtual python environments.
 
 ## Requirements
 Make sure you have a fresh Debian or Ubuntu installation to proceed.
@@ -37,8 +35,6 @@ sudo apt update && yes | sudo apt upgrade && yes | sudo apt install wget git && 
 - [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
 - [extract](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract)
 - [pip](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/pip)
-- [virtualenvwrapper](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper)
-- [virtualenv](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenv)
 
 There are many more available [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins).
 
@@ -50,6 +46,6 @@ To update the whole stack, enter the following commands in the bash shell:
 
 ```bash
 sudo apt-get update
-sudo apt-get install zsh-antigen virtualenvwrapper
+sudo apt-get install zsh-antigen
 antigen update
 ```
