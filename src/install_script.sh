@@ -15,9 +15,6 @@ sudo apt install zsh
 # install oh-my-zsh
 yes | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# install Virtualenvwrapper
-sudo apt-get install virtualenvwrapper
-
 # install Antigen
 if [ $distribution_id = "debian" ]; then
   sudo apt-get install zsh-antigen
