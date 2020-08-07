@@ -30,8 +30,8 @@ fi
 sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.antigenrc -O ~/.antigenrc)"
 
 # Config zsh to use Antigen
-zshrc_extra="$(wget -O - https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zshrc_extra)"
-sudo echo -e $zshrc_extra >> ~/.zshrc
+sh -c "$(wget https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/.zshrc_extra -O ~/.zshrc_extra)"
+cat ~/.zshrc ~/zshrc_extra
 
 # Now set ZSH as the default login shell for the user you’re logged in as with the following command:
 sudo usermod -s /usr/bin/zsh $(whoami)
