@@ -14,5 +14,5 @@ steps:
     sudo apt update
     sudo apt upgrade
     sudo apt install wget git
-    yes | sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
+    yes | sudo sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
   displayName: 'Dev boilerplate install'
