@@ -36,9 +36,9 @@ rm ~/.zshrc_extra
 
 
 # Now set ZSH as the default login shell for the user you’re logged in as with the following command:
-sudo chmod gu+w ~/.zshrc
-sudo chown $(whoami) ~/.zshrc
+# sudo chmod gu+w ~/.zshrc
+# sudo chown $(whoami) ~/.zshrc
 
-sudo usermod -s /usr/bin/zsh $(whoami)
+usermod -s /usr/bin/zsh $(whoami)
 
 exit
