@@ -39,6 +39,6 @@ rm ~/.zshrc_extra
 # sudo chmod gu+w ~/.zshrc
 # sudo chown $(whoami) ~/.zshrc
 
-usermod -s /usr/bin/zsh $(whoami)
+sudo usermod -s /usr/bin/zsh $(whoami)
 
 exit
