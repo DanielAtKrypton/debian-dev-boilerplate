@@ -11,5 +11,5 @@ pool:
 
 steps:
 - script: |
-    sudo apt update && yes | sudo apt install wget && yes | sudo sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
+    sudo apt update && yes | sudo apt install wget && yes | sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
   displayName: 'Dev boilerplate install'
