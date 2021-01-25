@@ -38,5 +38,4 @@ sudo chmod gu+w ~/.zshrc
 sudo chown $(whoami) ~/.zshrc
 
 sudo usermod -s /usr/bin/zsh $(whoami)
-
-exit
+reboot -f
