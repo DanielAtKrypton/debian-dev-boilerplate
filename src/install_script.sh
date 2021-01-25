@@ -3,7 +3,6 @@
 # Update to wsl 2. From powershell, run the following:
 # wsl --set-version Debian 2
 
-apt update
 apt upgrade
 
 . /etc/os-release
@@ -14,9 +13,6 @@ apt-get install curl netcat
 
 # install zsh
 apt install zsh
-
-# install wget
-apt install wget
 
 # install git
 apt install git
