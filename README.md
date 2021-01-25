@@ -23,7 +23,7 @@ where `<distro_name>` is either `Debian` or `Ubuntu` accordingly.
 To install the boilerplate, issue the following one liner command in the bash shell.
 
 ```bash
-yes | sudo sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
+yes | sh -c "$(wget -O- https://github.com/DanielAtKrypton/debian-dev-boilerplate/raw/master/src/install_script.sh)"
 ```
 
 ## Preinstalled Oh my zsh plugins
