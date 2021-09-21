@@ -24,6 +24,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 # Extra zsh completions
 antigen bundle zsh-users/zsh-completions
 
+# Viper env
+antigen bundle DanielAtKrypton/viper-env
+
 # Load the theme
 # antigen theme robbyrussell
 antigen theme romkatv/powerlevel10k
