@@ -13,4 +13,9 @@ else
 fi
 
 # set DISPLAY variable to the IP automatically assigned to WSL2
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+eval "$(direnv hook zsh)"
+
+export HOST_IP="$(ip route |awk '/^default/{print $3}')"
+export PULSE_SERVER="tcp:$HOST_IP"
