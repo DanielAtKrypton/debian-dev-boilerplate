@@ -8,7 +8,7 @@ sudo apt upgrade
 . /etc/os-release
 distribution_id=$(. /etc/os-release; echo $ID)
 
-sudo apt-get install curl zsh git
+sudo apt-get install curl zsh git direnv
 
 # install oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
